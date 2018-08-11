@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrAppModule"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true"
+  ComponentClass="model.service.HrAppModuleImpl"
+  ComponentInterface="model.service.common.HrAppModule">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="HrDepartments"
+    ViewObjectName="model.queries.HrDepartments"/>
+  <ViewUsage
+    Name="HrEmployees"
+    ViewObjectName="model.queries.HrEmployees"/>
+  <ViewUsage
+    Name="HrLov17"
+    ViewObjectName="model.queries.lookups.HrLov17"/>
+  <ViewLinkUsage
+    Name="HrDepartmentsEmployees"
+    ViewLinkObjectName="model.queries.links.HrDepartmentsEmployees"
+    SrcViewUsageName="model.service.HrAppModule.HrDepartments"
+    DstViewUsageName="model.service.HrAppModule.HrEmployees"
+    Reversed="false"/>
+  <ClientInterface
+    Name="__clientInterface">
+    <Method
+      Name="getHrReport"
+      MethodName="getHrReport">
+      <Return
+        Name="_return_type_"
+        Type="byte[]"/>
+      <Parameter
+        Name="deptId"
+        Type="java.lang.String"/>
+    </Method>
+    <Method
+      Name="getXMLDataHr"
+      MethodName="getXMLDataHr">
+      <Return
+        Name="_return_type_"
+        Type="byte[]"/>
+      <Parameter
+        Name="deptId"
+        Type="java.lang.String"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

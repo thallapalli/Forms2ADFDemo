@@ -1,0 +1,86 @@
+<Employees>
+   <EmployeesRow>
+      <EmployeeId>100</EmployeeId>
+      <FirstName>Steven</FirstName>
+      <LastName>King</LastName>
+      <Email>SKING</Email>
+      <PhoneNumber>515.123.4567</PhoneNumber>
+      <HireDate>1987-06-17 00:00:00.0</HireDate>
+      <JobId>AD_PRES</JobId>
+      <Salary>24000</Salary>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>114</EmployeeId>
+      <FirstName>Den</FirstName>
+      <LastName>Raphaely</LastName>
+      <Email>DRAPHEAL</Email>
+      <PhoneNumber>515.127.4561</PhoneNumber>
+      <HireDate>1994-12-07 00:00:00.0</HireDate>
+      <JobId>PU_MAN</JobId>
+      <Salary>11000</Salary>
+      <ManagerId>100</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>115</EmployeeId>
+      <FirstName>Alexander</FirstName>
+      <LastName>Khoo</LastName>
+      <Email>AKHOO</Email>
+      <PhoneNumber>515.127.4562</PhoneNumber>
+      <HireDate>1995-05-18 00:00:00.0</HireDate>
+      <JobId>PU_CLERK</JobId>
+      <Salary>3100</Salary>
+      <ManagerId>114</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>116</EmployeeId>
+      <FirstName>Shelli</FirstName>
+      <LastName>Baida</LastName>
+      <Email>SBAIDA</Email>
+      <PhoneNumber>515.127.4563</PhoneNumber>
+      <HireDate>1997-12-24 00:00:00.0</HireDate>
+      <JobId>PU_CLERK</JobId>
+      <Salary>2900</Salary>
+      <ManagerId>114</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>117</EmployeeId>
+      <FirstName>Sigal</FirstName>
+      <LastName>Tobias</LastName>
+      <Email>STOBIAS</Email>
+      <PhoneNumber>515.127.4564</PhoneNumber>
+      <HireDate>1997-07-24 00:00:00.0</HireDate>
+      <JobId>PU_CLERK</JobId>
+      <Salary>2800</Salary>
+      <ManagerId>114</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>118</EmployeeId>
+      <FirstName>Guy</FirstName>
+      <LastName>Himuro</LastName>
+      <Email>GHIMURO</Email>
+      <PhoneNumber>515.127.4565</PhoneNumber>
+      <HireDate>1998-11-15 00:00:00.0</HireDate>
+      <JobId>PU_CLERK</JobId>
+      <Salary>2600</Salary>
+      <ManagerId>114</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+   <EmployeesRow>
+      <EmployeeId>119</EmployeeId>
+      <FirstName>Karen</FirstName>
+      <LastName>Colmenares</LastName>
+      <Email>KCOLMENA</Email>
+      <PhoneNumber>515.127.4566</PhoneNumber>
+      <HireDate>1999-08-10 00:00:00.0</HireDate>
+      <JobId>PU_CLERK</JobId>
+      <Salary>2500</Salary>
+      <ManagerId>114</ManagerId>
+      <DepartmentId>30</DepartmentId>
+   </EmployeesRow>
+</Employees>
+

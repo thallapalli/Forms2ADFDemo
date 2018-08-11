@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="demo.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+             <af:resource type="javascript">
+                  function customHandler(event) {
+
+                      var component = AdfPage.PAGE.findComponent(event);
+                      var actionEvent = new AdfActionEvent(component);
+                      actionEvent.queue();
+
+                  }
+
+                  //inline script to avoid taskflow bug
+                  function onEnterKey(inputevent) {
+                      if (inputevent.getKeyCode() == AdfKeyStroke.ENTER_KEY) {
+
+                          var inputTextId = inputevent.getSource();
+                          var reportbtn = inputTextId.findComponent('cb2');
+
+                          AdfActionEvent.queue(reportbtn);
+                          inputevent.cancel();
+                      }
+                  }
+                </af:resource>
+                <af:pageTemplate viewId="/oracle/templates/responsiveTemplate.jspx" id="pt1">
+                    <f:facet name="header">
+                    <af:outputText id="ot1" value="Forms2ADFDemo"/>
+                    </f:facet>
+                    <f:facet name="status"/>
+                    <f:facet name="appNav"/>
+                    <f:facet name="globalLinks"/>
+                    <f:facet name="footer"/>
+                    <f:facet name="center">
+                        <af:panelTabbed position="above" id="pt2">
+                            <af:showDetailItem id="Form" text="Tab Label 1" styleClass="AFStretchWidth" >
+                                <af:treeTable value="#{bindings.HrDepartments.treeModel}" var="node"
+                                              selectionListener="#{bindings.HrDepartments.treeModel.makeCurrent}"
+                                              rowSelection="single" id="tt1">
+                                    <f:facet name="nodeStamp">
+                                        <af:column id="c1">
+                                            <af:outputText value="#{node}" id="ot2"/>
+                                        </af:column>
+                                    </f:facet>
+                                    <f:facet name="pathStamp" >
+                                        <af:outputText value="#{node}" id="ot3"/>
+                                    </f:facet>
+                                </af:treeTable>
+                            </af:showDetailItem>
+                            <af:showDetailItem text="BI" id="sdi1">
+                             <af:panelGroupLayout id="pgl1">
+                                <af:button text="Generate Report" id="b1">
+                                    <af:showPopupBehavior triggerType="click" popupId="p1" align="overlap"/>
+                                </af:button>
+                                <af:spacer height="10" width="10"/>
+                                <af:button text="Download Report" id="cb2" clientComponent="true"
+                                           action="#{backingBeanScope.IndexBacking.onGenerateReport}"/>
+                                <af:button text="Download Report Hidden" id="cb1"
+                                           binding="#{backingBeanScope.IndexBacking.cb1}" clientComponent="true"
+                                           visible="false">
+                                    <af:fileDownloadActionListener method="#{backingBeanScope.IndexBacking.HrReport}"
+                                                                   contentType="application/pdf" filename="hr.pdf"/>
+                                </af:button>
+                           
+                               </af:panelGroupLayout>
+                                <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+                                    <af:dialog>
+                                        <af:inlineFrame id="if1" shortDesc="This is an inline frame"
+                                                        source="/generatepdf" styleClass="AFStretchWidth"
+                                                        inlineStyle="height:900px;width:600px;"/>
+                                    </af:dialog>
+                                </af:popup>
+                            </af:showDetailItem>
+                        </af:panelTabbed>
+                    </f:facet>
+                    <f:facet name="start"/>
+                    <f:facet name="end"/>
+                </af:pageTemplate>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

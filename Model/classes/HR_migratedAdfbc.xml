@@ -1,0 +1,543 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<DocRoot xmlns="http://xmlns.oracle.com/jmig/bc4j">
+   <JboProject Name="HrProject">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+   </JboProject>
+   <JboPackage Name="model.entities" PackageName="model.entities">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <Entity Name="Departments" AliasName="" DBObjectName="DEPARTMENTS" DBObjectType="table" CodeGenFlag="0">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="TableDefinition:DEPARTMENTS"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <Attribute Name="DepartmentName" TableName="DEPARTMENTS" ColumnName="DEPARTMENT_NAME" ColumnType="VARCHAR2" DefaultValue="" Precision="30" Scale="" IsNotNull="true" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:DEPARTMENT_NAME"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="LocationId" TableName="DEPARTMENTS" ColumnName="LOCATION_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:LOCATION_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="ManagerId" TableName="DEPARTMENTS" ColumnName="MANAGER_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:MANAGER_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="DepartmentId" TableName="DEPARTMENTS" ColumnName="DEPARTMENT_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="" PrimaryKey="true" RetrievedOnInsert="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:DEPARTMENT_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Key Name="DeptIdPk">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ConstraintDefinition:DEPT_ID_PK"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+            <AttrArray Name="List">
+               <Item Value="model.entities.Departments.DepartmentId"/>
+            </AttrArray>
+         </Key>
+      </Entity>
+      <Entity Name="Employees" AliasName="" DBObjectName="EMPLOYEES" DBObjectType="table" CodeGenFlag="0">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="TableDefinition:EMPLOYEES"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <Attribute Name="DepartmentId" TableName="EMPLOYEES" ColumnName="DEPARTMENT_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:DEPARTMENT_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="FirstName" TableName="EMPLOYEES" ColumnName="FIRST_NAME" ColumnType="VARCHAR2" DefaultValue="" Precision="20" Scale="" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:FIRST_NAME"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="HireDate" TableName="EMPLOYEES" ColumnName="HIRE_DATE" ColumnType="DATE" DefaultValue="" Precision="7" Scale="" IsNotNull="true" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:HIRE_DATE"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="JobId" TableName="EMPLOYEES" ColumnName="JOB_ID" ColumnType="VARCHAR2" DefaultValue="" Precision="10" Scale="" IsNotNull="true" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:JOB_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="PhoneNumber" TableName="EMPLOYEES" ColumnName="PHONE_NUMBER" ColumnType="VARCHAR2" DefaultValue="" Precision="20" Scale="" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:PHONE_NUMBER"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="CommissionPct" TableName="EMPLOYEES" ColumnName="COMMISSION_PCT" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="2" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:COMMISSION_PCT"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="Salary" TableName="EMPLOYEES" ColumnName="SALARY" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="2" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:SALARY"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="Email" TableName="EMPLOYEES" ColumnName="EMAIL" ColumnType="VARCHAR2" DefaultValue="" Precision="25" Scale="" IsNotNull="true" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:EMAIL"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="ManagerId" TableName="EMPLOYEES" ColumnName="MANAGER_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:MANAGER_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="LastName" TableName="EMPLOYEES" ColumnName="LAST_NAME" ColumnType="VARCHAR2" DefaultValue="" Precision="25" Scale="" IsNotNull="true" Type="">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:LAST_NAME"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Attribute Name="EmployeeId" TableName="EMPLOYEES" ColumnName="EMPLOYEE_ID" ColumnType="NUMBER" DefaultValue="" Precision="22" Scale="0" IsNotNull="false" Type="" PrimaryKey="true" RetrievedOnInsert="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ColumnDefinition:EMPLOYEE_ID"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </Attribute>
+         <Key Name="EmpEmpIdPk">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="ConstraintDefinition:EMP_EMP_ID_PK"/>
+               <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+            <AttrArray Name="List">
+               <Item Value="model.entities.Employees.EmployeeId"/>
+            </AttrArray>
+         </Key>
+      </Entity>
+   </JboPackage>
+   <JboPackage Name="model.entities.assocs" PackageName="model.entities.assocs">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <Association Name="DeptMgrFk">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="ConstraintDefinition:DEPT_MGR_FK"/>
+            <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <AssociationEnd Name="DeptMgrFkDetails" Cardinality="-1" Owner="model.entities.Departments">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Departments.ManagerId"/>
+            </AttrArray>
+         </AssociationEnd>
+         <AssociationEnd Name="DeptMgrFkMaster" Cardinality="0" Source="true" Owner="model.entities.Employees">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Employees.EmployeeId"/>
+            </AttrArray>
+         </AssociationEnd>
+      </Association>
+      <Association Name="DeptLocFk">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="ConstraintDefinition:DEPT_LOC_FK"/>
+            <Attr Name="MigrationPath" Value="TableDefinition:DEPARTMENTS"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+      </Association>
+      <Association Name="EmpDeptFk">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="ConstraintDefinition:EMP_DEPT_FK"/>
+            <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <AssociationEnd Name="EmpDeptFkDetails" Cardinality="-1" Owner="model.entities.Employees">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Employees.DepartmentId"/>
+            </AttrArray>
+         </AssociationEnd>
+         <AssociationEnd Name="EmpDeptFkMaster" Cardinality="0" Source="true" Owner="model.entities.Departments">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Departments.DepartmentId"/>
+            </AttrArray>
+         </AssociationEnd>
+      </Association>
+      <Association Name="EmpManagerFk">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="ConstraintDefinition:EMP_MANAGER_FK"/>
+            <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <AssociationEnd Name="EmpManagerFkDetails" Cardinality="-1" Owner="model.entities.Employees">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Employees.ManagerId"/>
+            </AttrArray>
+         </AssociationEnd>
+         <AssociationEnd Name="EmpManagerFkMaster" Cardinality="0" Source="true" Owner="model.entities.Employees">
+            <AttrArray Name="Attributes">
+               <Item Value="model.entities.Employees.EmployeeId"/>
+            </AttrArray>
+         </AssociationEnd>
+      </Association>
+      <Association Name="EmpJobFk">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="ConstraintDefinition:EMP_JOB_FK"/>
+            <Attr Name="MigrationPath" Value="TableDefinition:EMPLOYEES"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+      </Association>
+   </JboPackage>
+   <JboPackage Name="model.queries" PackageName="model.queries">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <ViewObject Name="HrDepartments" CustomQuery="false">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="Block:DEPARTMENTS"/>
+            <Attr Name="MigrationPath" Value="FormModule:HR"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <ViewAttribute Name="ManagerId" EntityAttrName="ManagerId" EntityUsage="Departments" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:MANAGER_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayFlag" Value="N"/>
+               <Attr Name="Prompt" Value="Manager Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="LocationId" EntityAttrName="LocationId" EntityUsage="Departments" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:LOCATION_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayFlag" Value="N"/>
+               <Attr Name="Prompt" Value="Location Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="DepartmentId" EntityAttrName="DepartmentId" EntityUsage="Departments" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:DEPARTMENT_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="5"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="DepartmentName" EntityAttrName="DepartmentName" EntityUsage="Departments" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:DEPARTMENT_NAME"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="29"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Name"/>
+            </DesignTime>
+         </ViewAttribute>
+         <EntityUsage Name="Departments" Entity="model.entities.Departments">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Block:DEPARTMENTS"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </EntityUsage>
+      </ViewObject>
+      <ViewObject Name="HrEmployees" CustomQuery="false">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="Block:EMPLOYEES"/>
+            <Attr Name="MigrationPath" Value="FormModule:HR"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <ViewAttribute Name="ManagerId" EntityAttrName="ManagerId" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:MANAGER_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayFlag" Value="N"/>
+               <Attr Name="Prompt" Value="Manager Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="DepartmentId" EntityAttrName="DepartmentId" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:DEPARTMENT_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayFlag" Value="N"/>
+               <Attr Name="Prompt" Value="Department Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="EmployeeId" EntityAttrName="EmployeeId" EntityUsage="Employees" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:EMPLOYEE_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="7"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="ID"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="FirstName" EntityAttrName="FirstName" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:FIRST_NAME"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="20"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="First Name"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="LastName" EntityAttrName="LastName" EntityUsage="Employees" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:LAST_NAME"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="25"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Last Name"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="JobId" EntityAttrName="JobId" EntityUsage="Employees" IsUpdateable="true" LovName="HrLov17ListBinding" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:JOB_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayType" Value="input_text_lov"/>
+               <Attr Name="DisplayWidth" Value="10"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Job Id"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="MEmployeeId" EntityAttrName="EmployeeId" EntityUsage="Employees" IsUpdateable="true" IsNotNull="false">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:M_EMPLOYEE_ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="7"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="ID"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="MFirstName" EntityAttrName="FirstName" EntityUsage="Employees" IsUpdateable="true" IsNotNull="false">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:M_FIRST_NAME"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="20"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="First Name"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="MLastName" EntityAttrName="LastName" EntityUsage="Employees" IsUpdateable="true" IsNotNull="false">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:M_LAST_NAME"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="25"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Last Name"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="Email" EntityAttrName="Email" EntityUsage="Employees" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:EMAIL"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="25"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Email"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="PhoneNumber" EntityAttrName="PhoneNumber" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:PHONE_NUMBER"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="20"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Phone"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="HireDate" EntityAttrName="HireDate" EntityUsage="Employees" IsUpdateable="true" IsNotNull="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:HIRE_DATE"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="11"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Hire Date"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="Salary" EntityAttrName="Salary" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:SALARY"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="10"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Salary"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="CommissionPct" EntityAttrName="CommissionPct" EntityUsage="Employees" IsUpdateable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Item:COMMISSION_PCT"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:EMPLOYEES"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="DisplayWidth" Value="6"/>
+               <Attr Name="DisplayHeight" Value="1"/>
+               <Attr Name="Prompt" Value="Commission %"/>
+            </DesignTime>
+         </ViewAttribute>
+         <EntityUsage Name="Employees" Entity="model.entities.Employees">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Block:EMPLOYEES"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </EntityUsage>
+         <ViewAccessor Name="HrLov17" ViewObjectName="model.queries.lookups.HrLov17"/>
+         <ListBinding Name="HrLov17ListBinding" ListVOName="HrLov17">
+            <AttrArray Name="AttrNames">
+               <Item Value="JobId"/>
+            </AttrArray>
+            <AttrArray Name="DerivedAttrNames"/>
+            <AttrArray Name="ListAttrNames">
+               <Item Value="Id"/>
+            </AttrArray>
+            <AttrArray Name="ListDisplayAttrNames">
+               <Item Value="Title"/>
+               <Item Value="Id"/>
+            </AttrArray>
+         </ListBinding>
+      </ViewObject>
+   </JboPackage>
+   <JboPackage Name="model.queries.links" PackageName="model.queries.links">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <ViewLink Name="HrDepartmentsEmployees">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="Relation:DEPARTMENTS_EMPLOYEES"/>
+            <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <ViewLinkDefEnd Name="HrDepartments" Cardinality="0" Source="true" Owner="model.queries.HrDepartments">
+            <AttrArray Name="Attributes">
+               <Item Value="model.queries.HrDepartments.DepartmentId"/>
+            </AttrArray>
+         </ViewLinkDefEnd>
+         <ViewLinkDefEnd Name="HrEmployees" Cardinality="-1" Owner="model.queries.HrEmployees">
+            <AttrArray Name="Attributes">
+               <Item Value="model.queries.HrEmployees.DepartmentId"/>
+            </AttrArray>
+         </ViewLinkDefEnd>
+      </ViewLink>
+   </JboPackage>
+   <JboPackage Name="model.queries.lookups" PackageName="model.queries.lookups">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <ViewObject Name="HrLov17" CustomQuery="true">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="RecordGroup:LOV17"/>
+            <Attr Name="MigrationPath" Value="FormModule:HR"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <ViewAttribute Name="Title" IsPersistent="false" IsUpdateable="false" SQLType="VARCHAR" Expression="TITLE" AliasName="TITLE" IsQueriable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="RecordGroupColumn:TITLE"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::RecordGroup:LOV17"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="Prompt" Value="Title"/>
+               <Attr Name="DisplayWidth" Value="34"/>
+            </DesignTime>
+         </ViewAttribute>
+         <ViewAttribute Name="Id" IsPersistent="false" IsUpdateable="false" SQLType="VARCHAR" Expression="ID" AliasName="ID" IsQueriable="true">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="RecordGroupColumn:ID"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::RecordGroup:LOV17"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+               <Attr Name="Prompt" Value="Id"/>
+               <Attr Name="DisplayWidth" Value="10"/>
+            </DesignTime>
+         </ViewAttribute>
+         <SQLQuery>SELECT job_title TITLE, job_id ID FROM jobs ORDER BY job_title</SQLQuery>
+      </ViewObject>
+   </JboPackage>
+   <JboPackage Name="model.service" PackageName="model.service">
+      <DesignTime>
+         <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+         <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+      </DesignTime>
+      <AppModule Name="HrAppModule">
+         <DesignTime>
+            <Attr Name="MigratedFrom" Value="FormModule:HR"/>
+            <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+         </DesignTime>
+         <ViewUsage Name="HrDepartments" ViewObjectName="model.queries.HrDepartments">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Block:DEPARTMENTS"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </ViewUsage>
+         <ViewUsage Name="HrEmployees" ViewObjectName="model.queries.HrEmployees">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Block:EMPLOYEES"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </ViewUsage>
+         <ViewUsage Name="HrLov17" ViewObjectName="model.queries.lookups.HrLov17">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="LOV:LOV17"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </ViewUsage>
+         <ViewLinkUsage Name="HrDepartmentsEmployees" ViewLinkObjectName="model.queries.links.HrDepartmentsEmployees" SrcViewUsageName="model.service.HrAppModule.HrDepartments" DstViewUsageName="model.service.HrAppModule.HrEmployees">
+            <DesignTime>
+               <Attr Name="MigratedFrom" Value="Relation:DEPARTMENTS_EMPLOYEES"/>
+               <Attr Name="MigrationPath" Value="FormModule:HR::Block:DEPARTMENTS"/>
+               <Attr Name="MigrationTimeStamp" Value="Fri Aug 10 23:11:01 CDT 2018"/>
+            </DesignTime>
+         </ViewLinkUsage>
+      </AppModule>
+   </JboPackage>
+</DocRoot>

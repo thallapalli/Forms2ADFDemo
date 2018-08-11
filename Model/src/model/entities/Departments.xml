@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Departments"
+  Version="12.2.1.9.14"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="DEPARTMENTS"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="DepartmentName"
+    IsNotNull="true"
+    Precision="30"
+    ColumnName="DEPARTMENT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="DEPARTMENTS"/>
+  <Attribute
+    Name="LocationId"
+    Precision="22"
+    Scale="0"
+    ColumnName="LOCATION_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="DEPARTMENTS"/>
+  <Attribute
+    Name="ManagerId"
+    Precision="22"
+    Scale="0"
+    ColumnName="MANAGER_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="DEPARTMENTS"/>
+  <Attribute
+    Name="DepartmentId"
+    Precision="22"
+    Scale="0"
+    ColumnName="DEPARTMENT_ID"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="DEPARTMENTS"
+    PrimaryKey="true"
+    RetrievedOnInsert="true"/>
+  <AccessorAttribute
+    Name="EmpDeptFkDetails"
+    Association="model.entities.assocs.EmpDeptFk"
+    AssociationEnd="model.entities.assocs.EmpDeptFk.EmpDeptFkDetails"
+    AssociationOtherEnd="model.entities.assocs.EmpDeptFk.EmpDeptFkMaster"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="DeptMgrFkMaster"
+    Association="model.entities.assocs.DeptMgrFk"
+    AssociationEnd="model.entities.assocs.DeptMgrFk.DeptMgrFkMaster"
+    AssociationOtherEnd="model.entities.assocs.DeptMgrFk.DeptMgrFkDetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="DeptIdPk"
+    PrimaryKey="true">
+    <AttrArray Name="Attributes">
+      <Item Value="model.entities.Departments.DepartmentId"/>
+    </AttrArray>
+  </Key>
+</Entity>
